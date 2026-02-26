@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently Asked Questions - Get answers to common questions about OPay" />
+  <title>FAQ - OPay</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">OPay</div>
+      <nav class="nav-links">
+        <a href="../../index.html">Home</a>
+        <a href="../privacy-policy/index.html">Privacy</a>
+        <a href="../terms-of-service/index.html">Terms</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../../index.html">Home</a> / <span aria-current="page">FAQ</span>
+    </div>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <section class="faq-search">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <input type="text" id="faqSearch" placeholder="Search FAQs..." class="faq-search-input">
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="faq-content">
+    <div class="container">
+      <div class="faq-grid">
+        <!-- Account Section -->
+        <section class="faq-section">
+          <h2 class="faq-category"><i class="fas fa-user"></i> Account Management</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do I create an OPay account?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Click the "Sign Up" button on our homepage, fill in your details (name, email, phone, password), and verify your email. Your account will be ready to use immediately!</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do I reset my password?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Click "Forgot Password" on the login page, enter your email, and we'll send you a password reset link. Follow the instructions to create a new password.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Is my account secure?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! We use 256-bit SSL encryption, two-factor authentication, and advanced fraud detection to keep your account safe.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Transactions Section -->
+        <section class="faq-section">
+          <h2 class="faq-category"><i class="fas fa-exchange-alt"></i> Transactions</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How long do transfers take?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Most transfers between OPay users are instant. Bank transfers typically take 1-3 business days depending on your bank.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What are the transfer fees?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Transfer fees vary by recipient: Same bank (0.5%), Other banks (1%), International (5%). Use our fee calculator to estimate costs.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can I cancel a transaction?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>If the transaction is pending, you can cancel it immediately. Completed transactions cannot be reversed; you'll need to contact support if there's an issue.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Payments Section -->
+        <section class="faq-section">
+          <h2 class="faq-category"><i class="fas fa-credit-card"></i> Payments</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What payment methods are accepted?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>We accept debit cards, credit cards, bank transfers, and mobile money wallets. All payments are secure and encrypted.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can I buy airtime?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! You can purchase airtime for all major carriers directly from the app. Data bundles are also available.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What is your uptime guarantee?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>We guarantee 99.9% uptime. Our infrastructure is built for reliability and scalability.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="faq-section">
+          <h2 class="faq-category"><i class="fas fa-lock"></i> Security & Privacy</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Is my data encrypted?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>All data is encrypted using industry-standard 256-bit SSL encryption. Financial data is additionally protected with advanced security protocols.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Do you sell my personal data?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>No, we never sell your personal data. We only share information with trusted partners when necessary for transaction processing.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How can I delete my account?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>You can request account deletion in your settings. Your data will be securely deleted within 30 days as per our privacy policy.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Section -->
+        <section class="faq-section">
+          <h2 class="faq-category"><i class="fas fa-code"></i> Technical Support</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What devices are supported?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>OPay is available on iOS, Android, and web browsers. You can access your account from any device.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Is there an app?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! Download OPay from the App Store (iOS) or Google Play Store (Android) for the best experience.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do I contact support?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Use the live chat on our website, email support@opay.com, or call +234 800 123 4567. We're available 24/7.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OPay</h3>
+        <p>Digital payments made easy.</p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="../privacy-policy/index.html">Privacy Policy</a>
+        <a href="../terms-of-service/index.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Inioluwa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+      <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="../privacy-policy/index.html">Privacy Policy</a>.</p>
+      <div class="cookie-buttons">
+        <button class="btn-outline" id="cookieReject">Reject</button>
+        <button class="btn-primary" id="cookieAccept">Accept All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

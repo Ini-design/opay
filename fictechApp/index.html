@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OPay - Fast, secure & reliable digital payments. Send money, pay bills, buy airtime instantly." />
+  <meta name="keywords" content="digital payments, money transfer, mobile wallet, online banking" />
+  <meta name="author" content="Inioluwa" />
+  <meta property="og:title" content="OPay - Digital Payments Made Easy" />
+  <meta property="og:description" content="Experience seamless payments, transfers, savings, and financial security — all in one app." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#00c853" />
+  <link rel="canonical" href="https://opay.example.com/" />
+  <title>OPay - Fast, Secure & Reliable Digital Payments</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OPay",
+    "description": "Digital payments platform",
+    "url": "https://opay.example.com",
+    "logo": "https://opay.example.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/opay",
+      "https://facebook.com/opay"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="header" role="banner">
+    <div class="container nav">
+      <div class="logo" aria-label="OPay Logo">OPay</div>
+
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="faq/index.html">FAQ</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="privacy-policy/index.html">Privacy</a>
+        <a href="#footer" aria-label="Go to footer">Contact</a>
+      </nav>
+      <div class="nav-search">
+        <input type="text" id="searchBox" placeholder="Search services..." class="search-input" aria-label="Search services">
+      </div>
+      <div class="nav-cta">
+        <button class="btn-primary" id="signUpBtn" aria-label="Create a new account">Sign Up</button>
+        <a href="dashboard/index.html" class="btn-secondary" aria-label="Go to dashboard">Dashboard</a>
+        <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      <!-- Mobile menu icon -->
+      <div class="menu-toggle" id="menuToggle" aria-label="Toggle mobile menu" role="button" tabindex="0">☰</div>
+    </div>
+    <!-- BREADCRUMB ================= -->
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <span aria-current="page">Home</span>
+    </div>
+  </div>
+  <! ================= HERO ================= -->
+  <section class="hero" aria-label="Download OPay app">
+    <div class="container">
+      <div class="hero-text">
+        <h1>Fast, Secure & Reliable Digital Payments</h1>
+        <p>
+          Experience seamless payments, transfers, savings, and financial
+          security — all in one app.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary">Download App</button>
+          <button class="btn-outline">Learn More</button>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="opay-card">
+          <div class="card-chip"></div>
+          <div class="card-logo">OPay</div>
+          <div class="card-number">
+            <span>5234</span>
+            <span>8901</span>
+            <span>2345</span>
+            <span>6789</span>
+          </div>
+          <div class="card-holder">
+            <p class="card-label">CARD HOLDER</p>
+            <p class="card-name">INIOLUWA E.</p>
+          </div>
+          <div class="card-expiry">
+            <p class="card-label">VALID THRU</p>
+            <p class="card-date">12/28</p>
+          </div>
+          <div class="card-wave"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= FEATURES ================= -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">What You Can Do</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card" data-feature="Payments">
+          <h3> Payments</h3>
+          <p>Pay bills, buy airtime, and shop online with ease.</p>
+        </div>
+
+        <div class="feature-card" data-feature="Transfers">
+          <h3> Transfers</h3>
+          <p>Send and receive money instantly anytime, anywhere.</p>
+        </div>
+
+        <div class="feature-card" data-feature="Security">
+          <h3> Security</h3>
+          <p>Advanced encryption and fraud detection for safety.</p>
+        </div>
+
+        <div class="feature-card" data-feature="Savings">
+          <h3> Savings</h3>
+          <p>Grow your money with smart and flexible savings options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= STATISTICS ================= -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div>
+        <h3>40M+</h3>
+        <p>Users</p>
+      </div>
+      <div>
+        <h3>1M+</h3>
+        <p>Daily Transactions</p>
+      </div>
+      <div>
+        <h3>99.9%</h3>
+        <p>Uptime</p>
+      </div>
+    </div>
+  </section>
+  <!-- ================= CALCULATOR SECTION ================= -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <h2 class="section-title">Transfer Fee Calculator</h2>
+      <div class="calculator">
+        <input type="number" id="amountInput" placeholder="Enter amount" min="0">
+        <select id="recipientType" title="Select recipient type">
+          <option value="same">Same Bank</option>
+          <option value="other">Other Bank</option>
+          <option value="international">International</option>
+        </select>
+        <button class="btn-primary" id="calculateBtn">Calculate</button>
+        <div id="calculatorResult" class="calculator-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS CAROUSEL ================= -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Users Say</h2>
+
+      <div class="testimonial-carousel">
+        <button class="carousel-btn prev" id="prevTestimonial">❮</button>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>"Fast transfers and easy to use."</p>
+            <span> Olufemi Inioluwa</span>
+          </div>
+
+          <div class="testimonial-card">
+            <p>"I trust this app for my daily payments."</p>
+            <span> David Blessings</span>
+          </div>
+
+          <div class="testimonial-card">
+            <p>"Secure and reliable financial solution."</p>
+            <span> Oufemi Enoch</span>
+          </div>
+        </div>
+        <button class="carousel-btn next" id="nextTestimonial">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DISCLAIMER ================= -->
+  <section class="disclaimer">
+    <div class="container">
+      <p>
+        ⚠️ <strong>Disclaimer:</strong> This website is a frontend-only clone
+        created strictly for a <strong>GenerativeAi student project</strong>.
+        It is <strong>not affiliated with or endorsed by OPay</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OPay</h3>
+        <p>Digital payments made easy.</p>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div>
+        <h4>Resources</h4>
+        <a href="faq/index.html">FAQ</a>
+        <a href="privacy-policy/index.html">Privacy Policy</a>
+        <a href="terms-of-service/index.html">Terms of Service</a>
+        <a href="dashboard/index.html">Dashboard</a>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Security</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="https://google.com" target="_blank" rel="noopener noreferrer" title="Google"><i class="fa-brands fa-google"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Inioluwa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Create Account</h2>
+      <form id="signupForm" class="form">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" placeholder="Email Address" required>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit" class="btn-primary">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Transaction Modal -->
+  <div id="transactionModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Send Money</h2>
+      <form id="transactionForm" class="form">
+        <input type="text" id="recipientName" placeholder="Recipient Name" required>
+        <input type="email" id="recipientEmail" placeholder="Recipient Email/Phone" required>
+        <input type="number" id="transferAmount" placeholder="Amount" min="0" required>
+        <textarea id="description" placeholder="Description (optional)"></textarea>
+        <button type="submit" class="btn-primary">Send Money</button>
+      </form>
+      <div id="transactionStatus"></div>
+    </div>
+  </div>
+
+  <!-- Live Chat Widget -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header" id="chatHeader">
+      <h4>💬 Support Chat</h4>
+      <span class="chat-toggle">−</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">
+          <p>Hello! How can we help you today?</p>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button id="sendChatBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollToTop" class="scroll-to-top" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- LOADING SPINNER -->
+  <div id="loadingSpinner" class="loading-spinner" role="status" aria-label="Loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieBanner" class="cookie-banner" role="complementary" aria-label="Cookie consent">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <h3>🍪 We use cookies</h3>
+        <p>We use cookies to enhance your experience. By continuing, you accept our <a href="privacy-policy/index.html">Privacy Policy</a> and <a href="terms-of-service/index.html">Terms of Service</a>.</p>
+      </div>
+      <div class="cookie-buttons">
+        <button class="btn-outline" id="cookieReject" aria-label="Reject cookies">Reject</button>
+        <button class="btn-primary" id="cookieAccept" aria-label="Accept all cookies">Accept All</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+<!-- JS FILE --> 
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Account Settings - Manage your preferences" />
+  <title>Settings - OPay</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">OPay</div>
+      <nav class="nav-links">
+        <a href="../../index.html">Home</a>
+        <a href="../dashboard/index.html">Dashboard</a>
+        <a href="index.html" class="active">Settings</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../../index.html">Home</a> / <span aria-current="page">Settings</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="settings-content">
+    <div class="container">
+      <h1>Settings</h1>
+
+      <div class="settings-layout">
+        <!-- SIDEBAR MENU -->
+        <aside class="settings-sidebar">
+          <div class="settings-menu">
+            <button class="menu-item active" data-section="profile">
+              <i class="fas fa-user"></i> Profile
+            </button>
+            <button class="menu-item" data-section="security">
+              <i class="fas fa-lock"></i> Security
+            </button>
+            <button class="menu-item" data-section="notifications">
+              <i class="fas fa-bell"></i> Notifications
+            </button>
+            <button class="menu-item" data-section="privacy">
+              <i class="fas fa-shield-alt"></i> Privacy
+            </button>
+            <button class="menu-item" data-section="payment">
+              <i class="fas fa-credit-card"></i> Payment Methods
+            </button>
+          </div>
+        </aside>
+
+        <!-- MAIN SETTINGS AREA -->
+        <section class="settings-main">
+          <!-- Profile Section -->
+          <div class="settings-section active" id="profile-section">
+            <h2>Profile Information</h2>
+            <form id="profileForm" class="settings-form">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" value="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" value="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" value="+234 800 123 4567" required>
+              </div>
+              <button type="submit" class="btn-primary">Save Changes</button>
+            </form>
+          </div>
+
+          <!-- Security Section -->
+          <div class="settings-section" id="security-section">
+            <h2>Security Settings</h2>
+            <div class="settings-item">
+              <div class="item-header">
+                <h3>Change Password</h3>
+                <p>Update your password regularly to keep your account secure</p>
+              </div>
+              <button class="btn-outline" id="changePasswordBtn">Change Password</button>
+            </div>
+
+            <div class="settings-item">
+              <div class="item-header">
+                <h3>Two-Factor Authentication (2FA)</h3>
+                <p>Add an extra layer of security to your account</p>
+              </div>
+              <div class="toggle-switch">
+                <input type="checkbox" id="twoFactorToggle" class="toggle-input">
+                <label for="twoFactorToggle" class="toggle-label">Enable 2FA</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications Section -->
+          <div class="settings-section" id="notifications-section">
+            <h2>Notification Preferences</h2>
+            
+            <div class="notification-group">
+              <h3>Email Notifications</h3>
+              <div class="notification-item">
+                <label>
+                  <input type="checkbox" class="notification-toggle" checked>
+                  <span>Transaction receipts</span>
+                </label>
+              </div>
+              <div class="notification-item">
+                <label>
+                  <input type="checkbox" class="notification-toggle" checked>
+                  <span>Account activity alerts</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="notification-group">
+              <h3>SMS Notifications</h3>
+              <div class="notification-item">
+                <label>
+                  <input type="checkbox" class="notification-toggle" checked>
+                  <span>Transaction alerts</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Privacy Section -->
+          <div class="settings-section" id="privacy-section">
+            <h2>Privacy Settings</h2>
+            <div class="privacy-item">
+              <label>
+                <input type="radio" name="privacy" value="private" class="privacy-radio" checked>
+                <span>Private Profile</span>
+              </label>
+              <p class="privacy-desc">Hide your profile from other users</p>
+            </div>
+          </div>
+
+          <!-- Payment Methods Section -->
+          <div class="settings-section" id="payment-section">
+            <h2>Payment Methods</h2>
+            <button class="btn-primary full-width">+ Add Payment Method</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OPay</h3>
+        <p>Digital payments made easy.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Inioluwa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <script src="../../script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

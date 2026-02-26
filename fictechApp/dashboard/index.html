@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="User Dashboard - Manage your OPay account" />
+  <title>Dashboard - OPay</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">OPay</div>
+      <nav class="nav-links">
+        <a href="../../index.html">Home</a>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="../settings/index.html">Settings</a>
+      </nav>
+      <div class="nav-cta">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+        <button class="btn-primary" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../../index.html">Home</a> / <span aria-current="page">Dashboard</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-content">
+    <div class="container">
+      <!-- WELCOME SECTION -->
+      <div class="welcome-banner">
+        <div>
+          <h1>Welcome back, <span id="userName">User</span>! 👋</h1>
+          <p id="lastLogin">Last login: Just now</p>
+        </div>
+        <button class="btn-primary" id="transferBtn">Send Money</button>
+      </div>
+
+      <!-- STATS GRID -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <div class="stat-icon balance">💰</div>
+          <div class="stat-info">
+            <p class="stat-label">Account Balance</p>
+            <h3 id="balance">₦0.00</h3>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon sent">📤</div>
+          <div class="stat-info">
+            <p class="stat-label">Money Sent</p>
+            <h3 id="moneySent">₦0.00</h3>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon received">📥</div>
+          <div class="stat-info">
+            <p class="stat-label">Money Received</p>
+            <h3 id="moneyReceived">₦0.00</h3>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon transactions">📊</div>
+          <div class="stat-info">
+            <p class="stat-label">Total Transactions</p>
+            <h3 id="totalTransactions">0</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <section class="quick-actions">
+        <h2>Quick Actions</h2>
+        <div class="action-grid">
+          <button class="action-card" id="sendMoneyBtn">
+            <i class="fas fa-paper-plane"></i>
+            <span>Send Money</span>
+          </button>
+          <button class="action-card" id="requestMoneyBtn">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Request Money</span>
+          </button>
+          <button class="action-card" id="buyAirtimeBtn">
+            <i class="fas fa-phone"></i>
+            <span>Buy Airtime</span>
+          </button>
+          <button class="action-card" id="payBillsBtn">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Pay Bills</span>
+          </button>
+          <button class="action-card" id="savingsBtn">
+            <i class="fas fa-piggy-bank"></i>
+            <span>Savings Plans</span>
+          </button>
+          <button class="action-card" id="historyBtn">
+            <i class="fas fa-history"></i>
+            <span>View History</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- RECENT TRANSACTIONS -->
+      <section class="recent-transactions">
+        <div class="section-header">
+          <h2>Recent Transactions</h2>
+          <a href="#" class="view-all">View All →</a>
+        </div>
+        <div class="transactions-table">
+          <div class="table-header">
+            <div>Description</div>
+            <div>Type</div>
+            <div>Amount</div>
+            <div>Date</div>
+            <div>Status</div>
+          </div>
+          <div id="transactionsList" class="table-body">
+            <div class="empty-state">
+              <p>No transactions yet. Start by <a href="#" id="firstTransferLink">sending money</a>!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVINGS SECTION -->
+      <section class="savings-section">
+        <h2>Savings Goals</h2>
+        <div class="savings-grid">
+          <div class="savings-card">
+            <h3>Emergency Fund</h3>
+            <p class="savings-amount">₦50,000</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 50%"></div>
+            </div>
+            <p class="progress-text">₦50,000 of ₦100,000</p>
+            <button class="btn-outline">Add to Savings</button>
+          </div>
+
+          <div class="savings-card">
+            <h3>Vacation Fund</h3>
+            <p class="savings-amount">₦25,000</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 25%"></div>
+            </div>
+            <p class="progress-text">₦25,000 of ₦200,000</p>
+            <button class="btn-outline">Add to Savings</button>
+          </div>
+
+          <div class="savings-card add-new">
+            <button class="btn-primary full-width">+ Create New Goal</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>OPay</h3>
+        <p>Digital payments made easy.</p>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../privacy-policy/index.html">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Inioluwa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <script src="../../script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

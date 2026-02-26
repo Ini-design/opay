@@ -1,0 +1,327 @@
+/* ================= DASHBOARD ================= */
+.dashboard-content {
+  min-height: 600px;
+  padding: 40px 0;
+  background: #f5f5f5;
+}
+
+body.dark-mode .dashboard-content {
+  background: #1a1a1a;
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, #00c853 0%, #00a841 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-banner h1 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .stat-card {
+  background: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5em;
+  min-width: 60px;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-label {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.stat-info h3 {
+  color: #00c853;
+  font-size: 1.8em;
+}
+
+/* ================= QUICK ACTIONS ================= */
+.quick-actions {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .quick-actions {
+  background: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quick-actions h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+body.dark-mode .quick-actions h2 {
+  color: #fff;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.action-card {
+  background: #f5f5f5;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+body.dark-mode .action-card {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+.action-card:hover {
+  background: #00c853;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.action-card i {
+  font-size: 1.8em;
+}
+
+/* ================= TRANSACTIONS TABLE ================= */
+.recent-transactions {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .recent-transactions {
+  background: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  color: #222;
+}
+
+body.dark-mode .section-header h2 {
+  color: #fff;
+}
+
+.view-all {
+  color: #00c853;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.transactions-table {
+  width: 100%;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+body.dark-mode .table-header {
+  background: #3a3a3a;
+  color: #aaa;
+  border-color: #555;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+body.dark-mode .empty-state {
+  color: #777;
+}
+
+/* ================= SAVINGS SECTION ================= */
+.savings-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .savings-section {
+  background: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.savings-section h2 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+body.dark-mode .savings-section h2 {
+  color: #fff;
+}
+
+.savings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.savings-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .savings-card {
+  background: #3a3a3a;
+  border-color: #555;
+}
+
+.savings-card:hover {
+  border-color: #00c853;
+  box-shadow: 0 4px 12px rgba(0, 200, 83, 0.15);
+}
+
+.savings-card h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .savings-card h3 {
+  color: #fff;
+}
+
+.savings-amount {
+  font-size: 1.8em;
+  color: #00c853;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+body.dark-mode .progress-bar {
+  background: #555;
+}
+
+.progress {
+  height: 100%;
+  background: #00c853;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .progress-text {
+  color: #777;
+}
+
+.savings-card.add-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #00c853;
+  background: rgba(0, 200, 83, 0.05);
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .welcome-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .action-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .table-header {
+    grid-template-columns: 1fr;
+  }
+}

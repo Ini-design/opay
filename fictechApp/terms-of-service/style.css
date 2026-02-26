@@ -1,0 +1,68 @@
+/* ================= LEGAL PAGES ================= */
+.legal-content {
+  min-height: 400px;
+  padding: 60px 0;
+  background: white;
+}
+
+body.dark-mode .legal-content {
+  background: #1a1a1a;
+}
+
+.legal-container {
+  max-width: 800px;
+}
+
+.legal-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+body.dark-mode .legal-content h1 {
+  color: #fff;
+}
+
+.last-updated {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+body.dark-mode .last-updated {
+  color: #aaa;
+}
+
+.legal-content section {
+  margin-bottom: 40px;
+}
+
+.legal-content section h2 {
+  color: #00c853;
+  margin: 20px 0 15px 0;
+  font-size: 1.5em;
+}
+
+.legal-content section p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .legal-content section p {
+  color: #aaa;
+}
+
+.legal-content ul {
+  margin: 15px 0 15px 30px;
+  color: #666;
+}
+
+body.dark-mode .legal-content ul {
+  color: #aaa;
+}
+
+.legal-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}

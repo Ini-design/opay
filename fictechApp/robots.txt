@@ -1,0 +1,30 @@
+# robots.txt for OPay Website
+# Allow search engines to crawl our site
+
+User-agent: *
+Allow: /
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+
+# Disallow sensitive pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /user-private/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://opay.example.com/sitemap.xml
