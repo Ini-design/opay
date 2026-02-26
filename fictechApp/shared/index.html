@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared Components - Opay</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">Opay</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../dashboard/">Dashboard</a>
+          <a href="../settings/">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="shared-container">
+    <div class="shared-header">
+      <h1>Shared Components Library</h1>
+      <p class="subtitle">Reusable UI components used across the FicTech application</p>
+    </div>
+
+    <!-- Buttons -->
+    <section class="component-section">
+      <h2>Buttons</h2>
+      <div class="demo-box">
+        <div class="demo-row">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-secondary">Secondary Button</button>
+          <button class="btn btn-outline">Outline Button</button>
+          <button class="btn btn-danger">Danger Button</button>
+        </div>
+        <div class="demo-row">
+          <button class="btn btn-primary btn-small">Small Primary</button>
+          <button class="btn btn-primary btn-large">Large Primary</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="component-section">
+      <h2>Form Elements</h2>
+      <div class="demo-box">
+        <div class="form-demo">
+          <div class="form-group">
+            <label>Text Input</label>
+            <input type="text" class="form-control" placeholder="Enter text here">
+          </div>
+          <div class="form-group">
+            <label>Email Input</label>
+            <input type="email" class="form-control" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label>Select Field</label>
+            <select class="form-control">
+              <option>Choose an option</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Textarea</label>
+            <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="demo-check" class="form-checkbox">
+            <label for="demo-check" class="checkbox-label">I agree to the terms</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="component-section">
+      <h2>Cards</h2>
+      <div class="demo-box">
+        <div class="cards-demo">
+          <div class="card">
+            <div class="card-body">
+              <h3>Simple Card</h3>
+              <p>This is a basic card component with standard padding and styling.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Card with Header</h3>
+            </div>
+            <div class="card-body">
+              <p>This card has a distinct header section for titles or actions.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Full Featured Card</h3>
+            </div>
+            <div class="card-body">
+              <p>This card demonstrates all available sections: header, body, and footer.</p>
+            </div>
+            <div class="card-footer">
+              <p class="footer-text">Card footer information</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alerts -->
+    <section class="component-section">
+      <h2>Alerts & Messages</h2>
+      <div class="demo-box alerts-demo">
+        <div class="alert alert-success">
+          <span>✓</span>
+          <div>
+            <strong>Success!</strong> Your action was completed successfully.
+          </div>
+        </div>
+        <div class="alert alert-danger">
+          <span>⚠</span>
+          <div>
+            <strong>Error!</strong> Something went wrong. Please try again.
+          </div>
+        </div>
+        <div class="alert alert-warning">
+          <span>!</span>
+          <div>
+            <strong>Warning!</strong> Please review before proceeding.
+          </div>
+        </div>
+        <div class="alert alert-info">
+          <span>ℹ</span>
+          <div>
+            <strong>Info:</strong> This is an informational message.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Badges -->
+    <section class="component-section">
+      <h2>Badges</h2>
+      <div class="demo-box badge-demo">
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-secondary">Secondary</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-danger">Danger</span>
+        <span class="badge badge-warning">Warning</span>
+      </div>
+    </section>
+
+    <!-- Models Grid -->
+    <section class="component-section">
+      <h2>Modal Example</h2>
+      <div class="demo-box">
+        <button class="btn btn-primary" onclick="openDemoModal()">Open Modal</button>
+        <p class="text-muted" style="margin-top: 15px;">Click the button above to see a modal example</p>
+      </div>
+    </section>
+
+    <!-- Tables -->
+    <section class="component-section">
+      <h2>Tables</h2>
+      <div class="demo-box">
+        <table class="demo-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Daneil</td>
+              <td>heritageiniko@gmail.com</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td><button class="btn btn-small btn-secondary">Edit</button></td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>inioluwaolufemi7@gmail.com</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td><button class="btn btn-small btn-secondary">Edit</button></td>
+            </tr>
+            <tr>
+              <td>Mike Johnson</td>
+              <td>oluinioluwa@gmail.com</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+              <td><button class="btn btn-small btn-secondary">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Colors & Typography -->
+    <section class="component-section">
+      <h2>Colors & Typography</h2>
+      <div class="demo-box colors-demo">
+        <div class="color-box">
+          <div class="color-swatch primary"></div>
+          <p>Primary: #00c853</p>
+        </div>
+        <div class="color-box">
+          <div class="color-swatch secondary"></div>
+          <p>Secondary: #1a73e8</p>
+        </div>
+        <div class="color-box">
+          <div class="color-swatch success"></div>
+          <p>Success: #4caf50</p>
+        </div>
+        <div class="color-box">
+          <div class="color-swatch danger"></div>
+          <p>Danger: #ff4444</p>
+        </div>
+        <div class="color-box">
+          <div class="color-swatch warning"></div>
+          <p>Warning: #ff9800</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing & Utilities -->
+    <section class="component-section">
+      <h2>Spacing & Utilities</h2>
+      <div class="demo-box">
+        <h4>Margin & Padding Classes</h4>
+        <p class="text-muted">Use mt-20, mb-20, p-20, etc. for quick spacing adjustments</p>
+        <div class="demo-spacing">
+          <div class="spacing-box mt-20 mb-20">mt-20 mb-20</div>
+          <div class="spacing-box p-20">p-20</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Demo -->
+  <div class="modal-overlay" id="demoModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Modal Example</h2>
+        <button class="modal-close" onclick="closeDemoModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <p>This is a reusable modal component. It can be used for forms, confirmations, or any content that needs user attention.</p>
+        <form>
+          <div class="form-group">
+            <label for="modal-input">Sample Input</label>
+            <input type="text" id="modal-input" class="form-control" placeholder="Enter something">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeDemoModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="closeDemoModal()">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">Opay</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

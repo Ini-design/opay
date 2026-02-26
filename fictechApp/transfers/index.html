@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfers - Opay</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">FicTech</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../transfers/">Transfers</a>
+          <a href="../dashboard/">Dashboard</a>
+          <a href="../settings/">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="transfers-container">
+    <div class="transfers-header">
+      <h1>Money Transfer</h1>
+      <button class="btn btn-primary" onclick="openNewTransferModal()">+ New Transfer</button>
+    </div>
+
+    <!-- Quick Stats -->
+    <section class="transfer-stats">
+      <div class="stat-card">
+        <div class="stat-label">Today's Transfers</div>
+        <div class="stat-value">₦45,500</div>
+        <div class="stat-sub">2 transactions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Weekly Limit</div>
+        <div class="stat-value">₦500,000</div>
+        <div class="stat-sub">89% used</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Monthly Transfers</div>
+        <div class="stat-value">₦1.2M</div>
+        <div class="stat-sub">28 transactions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Avg. Transfer Time</div>
+        <div class="stat-value">~2 mins</div>
+        <div class="stat-sub">Instant transfers</div>
+      </div>
+    </section>
+
+    <!-- Quick Transfer -->
+    <section class="quick-transfer">
+      <h2>Quick Transfer to Favorites</h2>
+      <div class="favorites-grid">
+        <div class="favorite-card" onclick="openTransferForm('Amara Okafor')">
+          <div class="avatar">AO</div>
+          <p class="name">Amara Okafor</p>
+          <p class="account">****5423</p>
+        </div>
+        <div class="favorite-card" onclick="openTransferForm('Chidi Nwankwo')">
+          <div class="avatar">CN</div>
+          <p class="name">Chidi Nwankwo</p>
+          <p class="account">****7891</p>
+        </div>
+        <div class="favorite-card" onclick="openTransferForm('Grace Samuel')">
+          <div class="avatar">GS</div>
+          <p class="name">Grace Samuel</p>
+          <p class="account">****2156</p>
+        </div>
+        <div class="add-favorite-card" onclick="openAddFavoriteModal()">
+          <p class="plus-icon">+</p>
+          <p>Add Favorite</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transfer Channels -->
+    <section class="transfer-channels">
+      <h2>Transfer Methods</h2>
+      <div class="channels-grid">
+        <div class="channel-card">
+          <div class="channel-icon">🏦</div>
+          <h3>Bank Transfer</h3>
+          <p>Transfer to any Nigerian bank account</p>
+          <button class="btn btn-secondary">Transfer Now</button>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">📱</div>
+          <h3>Mobile Money</h3>
+          <p>Transfer to mobile money wallets</p>
+          <button class="btn btn-secondary">Transfer Now</button>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">💳</div>
+          <h3>Card Transfer</h3>
+          <p>Send money to debit/credit cards</p>
+          <button class="btn btn-secondary">Transfer Now</button>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">🌍</div>
+          <h3>International</h3>
+          <p>Send money abroad safely</p>
+          <button class="btn btn-secondary">Transfer Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Transfers -->
+    <section class="recent-transfers">
+      <h2>Recent Transfers</h2>
+      <div class="transfers-table-wrapper">
+        <table class="transfers-table">
+          <thead>
+            <tr>
+              <th>Recipient</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="recipient-cell">
+                  <div class="recipient-avatar">AO</div>
+                  <div>
+                    <p class="recipient-name">Amara Okafor</p>
+                    <p class="recipient-account">****5423</p>
+                  </div>
+                </div>
+              </td>
+              <td class="amount">₦25,000</td>
+              <td class="date">Today, 2:30 PM</td>
+              <td><span class="status-badge success">Completed</span></td>
+              <td>
+                <button class="btn-action" onclick="viewTransfer()">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="recipient-cell">
+                  <div class="recipient-avatar">CN</div>
+                  <div>
+                    <p class="recipient-name">Chidi Nwankwo</p>
+                    <p class="recipient-account">****7891</p>
+                  </div>
+                </div>
+              </td>
+              <td class="amount">₦15,000</td>
+              <td class="date">Today, 10:15 AM</td>
+              <td><span class="status-badge success">Completed</span></td>
+              <td>
+                <button class="btn-action" onclick="viewTransfer()">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="recipient-cell">
+                  <div class="recipient-avatar">GS</div>
+                  <div>
+                    <p class="recipient-name">Grace Samuel</p>
+                    <p class="recipient-account">****2156</p>
+                  </div>
+                </div>
+              </td>
+              <td class="amount">₦50,000</td>
+              <td class="date">Yesterday, 5:45 PM</td>
+              <td><span class="status-badge success">Completed</span></td>
+              <td>
+                <button class="btn-action" onclick="viewTransfer()">View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="recipient-cell">
+                  <div class="recipient-avatar">KU</div>
+                  <div>
+                    <p class="recipient-name">Kunle Uthman</p>
+                    <p class="recipient-account">****1234</p>
+                  </div>
+                </div>
+              </td>
+              <td class="amount">₦35,000</td>
+              <td class="date">2 days ago</td>
+              <td><span class="status-badge pending">Pending</span></td>
+              <td>
+                <button class="btn-action" onclick="cancelTransfer()">Cancel</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">Opay</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

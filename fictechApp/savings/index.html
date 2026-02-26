@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings - FicTech</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">FicTech</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../savings/">Savings</a>
+          <a href="../dashboard/">Dashboard</a>
+          <a href="../settings/">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="savings-container">
+    <div class="savings-header">
+      <h1>Savings Plans</h1>
+      <button class="btn btn-primary" onclick="openCreateSavingModal()">+ Create Savings Plan</button>
+    </div>
+
+    <!-- Savings Summary -->
+    <section class="savings-summary">
+      <div class="summary-card">
+        <h3>Total Saved</h3>
+        <p class="amount">$12,450.50</p>
+        <p class="rate">+2.5% APY</p>
+      </div>
+      <div class="summary-card">
+        <h3>Monthly Goal</h3>
+        <p class="amount">$500.00</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="summary-card">
+        <h3>Interest Earned</h3>
+        <p class="amount">$312.25</p>
+        <p class="growth">↑ 12% this year</p>
+      </div>
+    </section>
+
+    <!-- Active Savings Plans -->
+    <section class="savings-plans">
+      <h2>Your Savings Plans</h2>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Emergency Fund</h3>
+            <span class="badge badge-primary">Active</span>
+          </div>
+          <div class="plan-body">
+            <div class="plan-stat">
+              <label>Current Balance</label>
+              <p class="value">$5,250.00</p>
+            </div>
+            <div class="plan-stat">
+              <label>Target Amount</label>
+              <p class="value">$10,000.00</p>
+            </div>
+            <div class="plan-stat">
+              <label>Progress</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 52.5%"></div>
+              </div>
+              <p class="small-text">52.5% of goal</p>
+            </div>
+            <div class="plan-stat">
+              <label>Interest Rate</label>
+              <p class="value">2.5% APY</p>
+            </div>
+          </div>
+          <div class="plan-actions">
+            <button class="btn btn-small btn-secondary" onclick="editPlan()">Edit</button>
+            <button class="btn btn-small btn-secondary" onclick="viewDetails()">Details</button>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Vacation Fund</h3>
+            <span class="badge badge-secondary">Active</span>
+          </div>
+          <div class="plan-body">
+            <div class="plan-stat">
+              <label>Current Balance</label>
+              <p class="value">$3,200.00</p>
+            </div>
+            <div class="plan-stat">
+              <label>Target Amount</label>
+              <p class="value">$5,000.00</p>
+            </div>
+            <div class="plan-stat">
+              <label>Progress</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 64%"></div>
+              </div>
+              <p class="small-text">64% of goal</p>
+            </div>
+            <div class="plan-stat">
+              <label>Interest Rate</label>
+              <p class="value">2.5% APY</p>
+            </div>
+          </div>
+          <div class="plan-actions">
+            <button class="btn btn-small btn-secondary" onclick="editPlan()">Edit</button>
+            <button class="btn btn-small btn-secondary" onclick="viewDetails()">Details</button>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Home Downpayment</h3>
+            <span class="badge badge-warning">Active</span>
+          </div>
+          <div class="plan-body">
+            <div class="plan-stat">
+              <label>Current Balance</label>
+              <p class="value">$4,000.50</p>
+            </div>
+            <div class="plan-stat">
+              <label>Target Amount</label>
+              <p class="value">$50,000.00</p>
+            </div>
+            <div class="plan-stat">
+              <label>Progress</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 8%"></div>
+              </div>
+              <p class="small-text">8% of goal</p>
+            </div>
+            <div class="plan-stat">
+              <label>Interest Rate</label>
+              <p class="value">2.5% APY</p>
+            </div>
+          </div>
+          <div class="plan-actions">
+            <button class="btn btn-small btn-secondary" onclick="editPlan()">Edit</button>
+            <button class="btn btn-small btn-secondary" onclick="viewDetails()">Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Savings Tips -->
+    <section class="savings-tips">
+      <h2>Money-Saving Tips</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">💡</div>
+          <h3>Automate Your Savings</h3>
+          <p>Set up automatic transfers to make saving effortless and consistent.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📈</div>
+          <h3>Regular Monitoring</h3>
+          <p>Review your savings progress monthly to stay motivated and on track.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🎯</div>
+          <h3>Set Clear Goals</h3>
+          <p>Having specific savings goals helps you stay focused and accountable.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💰</div>
+          <h3>Earn Interest</h3>
+          <p>Our savings plans offer competitive interest rates on your balance.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">FicTech</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security - FicTech</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">FicTech</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../security/">Security</a>
+          <a href="../dashboard/">Dashboard</a>
+          <a href="../settings/">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="security-container">
+    <div class="security-header">
+      <h1>Security Center</h1>
+      <p class="subtitle">Manage your account security and privacy settings</p>
+    </div>
+
+    <!-- Security Score -->
+    <section class="security-score">
+      <div class="score-card">
+        <div class="score-circle">
+          <div class="score-number">92</div>
+        </div>
+        <div class="score-info">
+          <h2>Account Security Score</h2>
+          <p class="score-status">Excellent</p>
+          <p class="score-description">Your account is well-protected. Keep following best practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Features -->
+    <section class="security-features">
+      <h2>Security Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-status active">✓</div>
+          <h3>Two-Factor Authentication</h3>
+          <p class="feature-desc">SMS & Email verification enabled</p>
+          <button class="btn btn-small btn-secondary">Manage</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-status active">✓</div>
+          <h3>Biometric Login</h3>
+          <p class="feature-desc">Fingerprint and face recognition</p>
+          <button class="btn btn-small btn-secondary">Configure</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-status active">✓</div>
+          <h3>Device Verification</h3>
+          <p class="feature-desc">Recognize trusted devices</p>
+          <button class="btn btn-small btn-secondary">View Devices</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-status">⚠</div>
+          <h3>Password Manager</h3>
+          <p class="feature-desc">Secure password storage</p>
+          <button class="btn btn-small btn-secondary">Enable</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-status active">✓</div>
+          <h3>Activity Monitoring</h3>
+          <p class="feature-desc">Real-time security alerts</p>
+          <button class="btn btn-small btn-secondary">View Logs</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-status active">✓</div>
+          <h3>Data Encryption</h3>
+          <p class="feature-desc">256-bit SSL encryption</p>
+          <button class="btn btn-small btn-secondary">Details</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="recent-activity">
+      <h2>Recent Login Activity</h2>
+      <div class="activity-list">
+        <div class="activity-item current-session">
+          <div class="activity-icon">📱</div>
+          <div class="activity-details">
+            <h4>Chrome on Windows</h4>
+            <p>192.168.1.100 • Your current session</p>
+            <span class="time">Active now</span>
+          </div>
+          <button class="activity-action">Sign out other sessions</button>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon">💻</div>
+          <div class="activity-details">
+            <h4>Safari on MacOS</h4>
+            <p>192.168.1.105 • Ikeja, Nigeria</p>
+            <span class="time">2 hours ago</span>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon">📱</div>
+          <div class="activity-details">
+            <h4>Mobile App on iOS</h4>
+            <p>192.168.1.110 • Lekki, Nigeria</p>
+            <span class="time">1 day ago</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Settings -->
+    <section class="privacy-settings">
+      <h2>Privacy Settings</h2>
+      <div class="settings-list">
+        <div class="setting-item">
+          <div class="setting-content">
+            <h4>Profile Visibility</h4>
+            <p>Control who can see your profile information</p>
+          </div>
+          <div class="setting-control">
+            <select class="form-control">
+              <option>Private</option>
+              <option>Friends Only</option>
+              <option>Public</option>
+            </select>
+          </div>
+        </div>
+        <div class="setting-item">
+          <div class="setting-content">
+            <h4>Marketing Communications</h4>
+            <p>Receive promotional emails and offers</p>
+          </div>
+          <div class="setting-control">
+            <label class="toggle-switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="setting-item">
+          <div class="setting-content">
+            <h4>Transaction Notifications</h4>
+            <p>Get alerts for all account activities</p>
+          </div>
+          <div class="setting-control">
+            <label class="toggle-switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="setting-item">
+          <div class="setting-content">
+            <h4>Data Sharing</h4>
+            <p>Allow us to share anonymized data for improvements</p>
+          </div>
+          <div class="setting-control">
+            <label class="toggle-switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Contacts -->
+    <section class="trusted-contacts">
+      <h2>Trusted Contacts</h2>
+      <p class="section-desc">Add trusted contacts for account recovery and security</p>
+      <div class="contacts-grid">
+        <div class="contact-card">
+          <h4>Mother</h4>
+          <p>+234 812 345 6789</p>
+          <div class="contact-actions">
+            <button class="btn btn-small btn-secondary" onclick="editContact()">Edit</button>
+            <button class="btn btn-small btn-danger" onclick="removeContact()">Remove</button>
+          </div>
+        </div>
+        <div class="add-contact-card" onclick="openAddContactModal()">
+          <p class="add-icon">+</p>
+          <p>Add Trusted Contact</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">FicTech</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

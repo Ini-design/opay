@@ -1,0 +1,318 @@
+/* ================= SAVINGS PAGE ================= */
+
+.savings-container {
+  min-height: calc(100vh - 300px);
+  padding: 40px 20px;
+  background: var(--light-bg);
+}
+
+body.dark-mode .savings-container {
+  background: #1a1a1a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.savings-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.savings-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: var(--text-dark);
+}
+
+body.dark-mode .savings-header h1 {
+  color: #fff;
+}
+
+/* Savings Summary */
+.savings-summary {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.summary-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+body.dark-mode .summary-card {
+  background: #2a2a2a;
+  box-shadow: var(--shadow-dark);
+}
+
+.summary-card h3 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.summary-card .amount {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.summary-card .rate,
+.summary-card .growth {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.summary-card .growth {
+  color: var(--primary-color);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--light-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+body.dark-mode .progress-bar {
+  background: #3a3a3a;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), #00ff88);
+  transition: width 0.3s ease;
+}
+
+/* Savings Plans */
+.savings-plans {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.savings-plans h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+body.dark-mode .savings-plans h2 {
+  color: #fff;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.plan-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark-mode .plan-card {
+  background: #2a2a2a;
+  box-shadow: var(--shadow-dark);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .plan-card:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.plan-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-mode .plan-header {
+  border-bottom-color: #444;
+}
+
+.plan-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-dark);
+  flex: 1;
+}
+
+body.dark-mode .plan-header h3 {
+  color: #fff;
+}
+
+.plan-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plan-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan-stat label {
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plan-stat .value {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+body.dark-mode .plan-stat .value {
+  color: #fff;
+}
+
+.plan-stat .small-text {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.plan-actions {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.plan-actions .btn {
+  flex: 1;
+}
+
+/* Savings Tips */
+.savings-tips {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.savings-tips h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+body.dark-mode .savings-tips h2 {
+  color: #fff;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.tip-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .tip-card {
+  background: #2a2a2a;
+  box-shadow: var(--shadow-dark);
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tip-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.tip-card h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+body.dark-mode .tip-card h3 {
+  color: #fff;
+}
+
+.tip-card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .savings-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .savings-header h1 {
+    font-size: 24px;
+  }
+
+  .savings-header .btn {
+    width: 100%;
+  }
+
+  .savings-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card .amount {
+    font-size: 24px;
+  }
+
+  .plan-stat .value {
+    font-size: 18px;
+  }
+}

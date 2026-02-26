@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication - Opay</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">FicTech</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./index.html" class="active">Auth</a>
+          <a href="../dashboard/index.html">Dashboard</a>
+          <a href="../settings/index.html">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="auth-container">
+    <div class="auth-wrapper">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Authentication</h1>
+          <p>Secure your Opay account</p>
+        </div>
+
+        <div class="auth-content">
+          <div class="auth-tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="register">Register</button>
+            <button class="tab-btn" data-tab="security">Security</button>
+          </div>
+
+          <!-- Login Tab -->
+          <div class="tab-content active" id="login-tab">
+            <form class="auth-form">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+              </div>
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="remember" class="form-checkbox">
+                <label for="remember" class="checkbox-label">Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Login</button>
+              <p class="auth-link">Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a></p>
+            </form>
+          </div>
+
+          <!-- Register Tab -->
+          <div class="tab-content" id="register-tab">
+            <form class="auth-form">
+              <div class="form-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-email">Email Address</label>
+                <input type="email" id="reg-email" class="form-control" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-password">Password</label>
+                <input type="password" id="reg-password" class="form-control" placeholder="Min 8 characters" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-confirm">Confirm Password</label>
+                <input type="password" id="reg-confirm" class="form-control" placeholder="Confirm password" required>
+              </div>
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="agree-terms" class="form-checkbox" required>
+                <label for="agree-terms" class="checkbox-label">I agree to the terms and conditions</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Create Account</button>
+              <p class="auth-link">Already have an account? <a href="#" onclick="switchTab('login')">Login here</a></p>
+            </form>
+          </div>
+
+          <!-- Security Tab -->
+          <div class="tab-content" id="security-tab">
+            <div class="security-options">
+              <div class="security-item">
+                <h3>Two-Factor Authentication</h3>
+                <p>Add an extra layer of security to your account</p>
+                <button class="btn btn-secondary">Enable 2FA</button>
+              </div>
+              <div class="security-item">
+                <h3>Change Password</h3>
+                <p>Update your password regularly for security</p>
+                <button class="btn btn-secondary">Change Password</button>
+              </div>
+              <div class="security-item">
+                <h3>Active Sessions</h3>
+                <p>Manage your active login sessions</p>
+                <button class="btn btn-secondary">Manage Sessions</button>
+              </div>
+              <div class="security-item">
+                <h3>Security Questions</h3>
+                <p>Set up security questions for account recovery</p>
+                <button class="btn btn-secondary">Update Questions</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">Opay</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+          <div class="social-links">
+            <a href="#">📘</a>
+            <a href="#">🐦</a>
+            <a href="#">📷</a>
+            <a href="#">💼</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Cards</a></li>
+            <li><a href="#">Transfers</a></li>
+            <li><a href="#">Savings</a></li>
+            <li><a href="../security/index.html">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="../privacy-policy/index.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/index.html">Terms of Service</a></li>
+            <li><a href="../security/index.html">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Opay. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="../privacy-policy/index.html">Privacy</a></li>
+          <li><a href="../terms-of-service/index.html">Terms</a></li>
+          <li><a href="../cookies-policy/index.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards - FicTech</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">FicTech</a>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../cards/">Cards</a>
+          <a href="../dashboard/">Dashboard</a>
+          <a href="../settings/">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="cards-container">
+    <div class="cards-header">
+      <h1>Your Cards</h1>
+      <button class="btn btn-primary" onclick="openAddCardModal()">+ Add New Card</button>
+    </div>
+
+    <!-- Active Cards -->
+    <section class="cards-section">
+      <h2>Active Cards</h2>
+      <div class="cards-grid">
+        <div class="card-item">
+          <div class="card-visual">
+            <div class="card-number">•••• •••• •••• 4522</div>
+            <div class="card-info">
+              <div>
+                <span class="card-label">Card Holder</span>
+                <p>John Doe</p>
+              </div>
+              <div>
+                <span class="card-label">Expires</span>
+                <p>12/25</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-small btn-secondary" onclick="editCard()">Edit</button>
+            <button class="btn btn-small btn-danger" onclick="deactivateCard()">Deactivate</button>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-visual">
+            <div class="card-number">•••• •••• •••• 7891</div>
+            <div class="card-info">
+              <div>
+                <span class="card-label">Card Holder</span>
+                <p>John Doe</p>
+              </div>
+              <div>
+                <span class="card-label">Expires</span>
+                <p>08/26</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-small btn-secondary" onclick="editCard()">Edit</button>
+            <button class="btn btn-small btn-danger" onclick="deactivateCard()">Deactivate</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Statistics -->
+    <section class="cards-stats">
+      <div class="stat-card">
+        <div class="stat-icon">🛒</div>
+        <div class="stat-content">
+          <h3>Total Transactions</h3>
+          <p class="stat-value">1,247</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-content">
+          <h3>Monthly Spending</h3>
+          <p class="stat-value">$4,231.50</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🔒</div>
+        <div class="stat-content">
+          <h3>Secured Transactions</h3>
+          <p class="stat-value">100%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Settings -->
+    <section class="card-settings">
+      <h2>Card Settings</h2>
+      <div class="settings-grid">
+        <div class="setting-item">
+          <h3>Card Limits</h3>
+          <p>Set daily spending limits</p>
+          <button class="btn btn-secondary">Configure</button>
+        </div>
+        <div class="setting-item">
+          <h3>Card Lock</h3>
+          <p>Temporarily lock or unlock your cards</p>
+          <button class="btn btn-secondary">Manage</button>
+        </div>
+        <div class="setting-item">
+          <h3>Notifications</h3>
+          <p>Enable alerts for card transactions</p>
+          <button class="btn btn-secondary">Settings</button>
+        </div>
+        <div class="setting-item">
+          <h3>Replacement Card</h3>
+          <p>Order a replacement or duplicate card</p>
+          <button class="btn btn-secondary">Order</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">FicTech</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Cards</a></li>
+            <li><a href="#">Transfers</a></li>
+            <li><a href="#">Savings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

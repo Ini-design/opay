@@ -1,25 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to your FicTech account securely">
+  <meta name="keywords" content="login, account, banking, digital payment">
+  <title>Login - FicTech</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login to Your Account</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <label for="password">Password *</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">FicTech</a>
+        <nav class="nav-links" role="navigation" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="../faq/index.html">FAQ</a>
+          <a href="../terms-of-service/index.html">Terms</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+        </nav>
+        <div class="user-menu">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <div class="header-container">
+      <a href="../index.html">Home</a> / <span aria-current="page">Login</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to your FicTech account</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+          <span class="form-text">We'll never share your email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="remember" class="form-checkbox" name="remember">
+          <label for="remember" class="checkbox-label">Remember me for 30 days</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+
+        <p class="form-text text-center">
+          Forgot your password? <a href="../index.html" class="link-primary">Reset it here</a>
+        </p>
+      </form>
+
+      <div class="login-footer">
+        <p>Don't have an account? <a href="../signup/">Create one here</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">FicTech</div>
+          <p class="footer-logo-text">Secure financial banking services for everyone.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../faq/">FAQ</a></li>
+            <li><a href="../terms-of-service/">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2024 FicTech. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

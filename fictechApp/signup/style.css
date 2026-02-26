@@ -1,52 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ================= SIGNUP PAGE ================= */
 
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', Arial, sans-serif;
-}
-
-/* ================= GLOBAL ================= */
-body {
-  color: #222;
-  line-height: 1.6;
-}
-
-/* ================= SIGNUP CONTAINER ================= */
 .signup-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 400px);
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #f0f0f0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #00c853 0%, #00a841 100%);
-  padding: 20px;
+}
+
+body.dark-mode .signup-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
 }
 
 .signup-form {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 550px;
   width: 100%;
-  max-width: 450px;
+}
+
+body.dark-mode .signup-form {
+  background: #2a2a2a;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .signup-header {
+  padding: 40px 30px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #00a841 100%);
+  color: var(--white);
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .signup-header h1 {
+  margin: 0 0 10px;
   font-size: 28px;
-  color: #00c853;
-  margin-bottom: 10px;
 }
 
 .signup-header p {
-  color: #666;
+  margin: 0;
+  opacity: 0.9;
   font-size: 14px;
+}
+
+.success-message {
+  padding: 15px 30px;
+  background: rgba(0, 200, 83, 0.1);
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 600;
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+}
+
+body.dark-mode .success-message {
+  background: rgba(0, 200, 83, 0.2);
 }
 
 /* ================= FORM STYLING ================= */
